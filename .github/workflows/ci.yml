@@ -49,7 +49,7 @@ jobs:
         if: matrix.os == 'macOS-latest'
         run: |
           brew update
-          brew install mariadb@10.5 sqlite
+          brew install mariadb@10.5 sqlite postgresql
           pg_ctl -D /usr/local/var/postgres start
           sleep 3
           createuser casbin_rs
